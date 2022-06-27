@@ -9,7 +9,8 @@ class Review:
 
 def load_reviews():
     """
-    Reads the json file and returns a list of Review objects or raw json
+    Reads the json file and returns a list of
+    Review objects and a raw json data
     """
     parsed = []
     with open('reviews.json', encoding='utf-8-sig') as f:
@@ -33,7 +34,7 @@ def sort_reviews(reviews, prioritizeByText, orderByDateNewest, orderByRatingHigh
         
     # prioritize those with reviewText after applying the other filters
     if prioritizeByText:
-       reviews.sort(key=lambda x: x.reviewText, reverse=True)
+       reviews.sort(key=lambda x: x.reviewText == "")
 
     return reviews
 
