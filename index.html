@@ -11,39 +11,39 @@
     </style>
     <body>
         <h3>Filter Reviews</h1>
-        <form>
+        <form action="/post_form" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Order by rating:</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                <option>Highest First</option>
-                <option>Lowest First</option>
+                <select name="orderByRatingHighest" class="form-control" id="exampleFormControlSelect1" required>
+                    <option value="1">Highest First</option>
+                    <option value="0">Lowest First</option>
                 </select>
             </div>
 
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Minimum rating:</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <select name="minimumRating" class="form-control" id="exampleFormControlSelect1" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
                 </select>
             </div>
 
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Order by date:</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                <option>Newest First</option>
-                <option>Oldest First</option>
+                <select name="orderByDateNewest" class="form-control" id="exampleFormControlSelect1" required>
+                    <option value="1">Newest First</option>
+                    <option value="0">Oldest First</option>
                 </select>
             </div>
 
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Prioritize by text:</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                <option>Yes</option>
-                <option>No</option>
+                <select name="prioritizeByText" class="form-control" id="exampleFormControlSelect1" required>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
                 </select>
             </div>
             <button type="submit" class="btn btn-primary">Filter</button>
